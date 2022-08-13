@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body*/
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: rgb(204, 209, 209);
+}
+
+/*header*/
+header{
+    margin: 10px;
+    padding: 20px;
+    background-color: #002B5B;
+    text-align: center;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+.menu li{
+    margin: auto;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    list-style-type: none;   
+}
+.menu li img{
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+}
+
+/*footer*/
+footer{
+    margin:0 10px 0 10px;
+    padding-left: 25px;
+    width: auto;
+    height: 200px;
+    text-align: center;
+    background-color: #002B5B; 
+ 
+}
+footer div{
+    margin: 20px 0px;
+    
+}
+footer div img{
+    margin-bottom: 0;
+    height: 20px;
+    width: 20px;
+}
+
+/*contenedor*/
+.contenedor{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "productos-1 productos-1 productos-1"
+    "productos-2 productos-2 productos-2"
+    "cajas cajas cajas"
+    ;
+}
+
+/*productos*/
+.productos-1{
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-1;  
+    align-items: center;
+    align-content: center; 
+}
+.productos-1 div{
+    display: flex;
+    flex-flow: column wrap;
+}
+.productos-1 div span{
+    margin: auto;
+}
+.productos-1 div button{
+    height: 20px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.productos-1 div img{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;   
+}
+
+.productos-2{
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-2;  
+    align-items: center;
+    align-content: center; 
+}
+.productos-2 div{
+    display: flex;
+    flex-flow: column wrap;
+}
+.productos-2 div span{
+    margin: auto;
+}
+.productos-2 div button{
+    height: 20px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.productos-2 div img{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;   
+}
+/*banner*/
+aside{
+    display: none;
+} 
+
+/*none*/
+.cajas{
+  display: none;
+} 
+.media-400{
+    display: none;
+}
+.media-1024{
+    display: none;
+}
+
+
+
+
+@media screen and (min-width:400px){
+    .contenedor{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        "productos-1 media-400 media-1024"
+        "banner banner banner"
+        "productos-2 productos-2 productos-2"
+        "cajas cajas cajas"
+        ;
+        font-size: 20px;
+    }
+    
+    
+    /*aside*/
+    aside{
+        display: grid;
+        grid-area: banner;
+        width: 100%;
+    }
+    aside img{
+        height: 200px;
+        width: 500px;
+    } 
+
+    /*imagenes*/
+    .media-400{
+        margin: 100px 0;
+        display: grid;
+        grid-area: media-400;  
+        align-items: center;
+        align-content: center; 
+    }
+    .media-400 div{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .media-400 div span{
+        margin: auto;
+    }
+    .media-400 div button{
+        height: 20px;
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .media-400 div img{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: relative;   
+    }
+    
+    /*footer*/
+    footer{
+        width: auto;
+    
+    }
+    footer ul, div{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+@media screen and (min-width:1024px) {
+    .contenedor{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        "productos-1 media-400 media-1024"
+        "productos-2 productos-2 productos-2"
+        "banner banner banner"
+        "cajas cajas cajas"
+        ;
+    }
+
+    .media-1024{
+        margin: 100px 0;
+        display: grid;
+        grid-area: media-1024;  
+        align-items: center;
+        align-content: center; 
+    }
+    .media-1024 div{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .media-1024 div span{
+        margin: auto;
+    }
+    .media-1024 div button{
+        height: 20px;
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .media-1024 div img{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: relative;   
+    }
+
+    /*cajas*/
+    .cajas{
+        margin-top: 50px;
+        margin-bottom: 200px;
+        height: 500px;
+        width: 850px;
+        display: grid;
+        grid-area: cajas;
+        background-color: rgba(255, 255, 255, 0.308);
+        border: 1px solid black;
+        justify-self: center;
+    }
+    .cajas div{
+        margin: 15px;
+        padding-top: 15px;
+        border: 1px solid black;
+    }
+    .cajas div img{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        position: relative;  
+    }
+
+
+    /*aside*/
+    aside img{
+        height: 200px;
+        width: 900px;
+    } 
+
+    /*footer*/
+    footer{
+        width: 100%;
+        font-size: 20px;
+    }
+
+}
