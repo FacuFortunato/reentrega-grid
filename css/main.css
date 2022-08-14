@@ -35,6 +35,10 @@ header{
     margin-top: 10px;
 }
 
+main h4{
+    margin-top: 100px;
+}
+
 /*footer*/
 footer{
     margin:0 10px 0 10px;
@@ -43,7 +47,7 @@ footer{
     height: 200px;
     text-align: center;
     background-color: #002B5B; 
-    font-size: 70%;
+    font-size: 15px;
 }
 footer div{
     margin: 20px 0px;
@@ -72,13 +76,12 @@ footer div img{
 .productos-1{
     margin: 100px 0;
     display: grid;
-    grid-area: productos-1;  
-    justify-items: center;
-    justify-content: center; 
+    grid-area: productos-1;
 }
 .productos-1 div{
     display: flex;
     flex-flow: column wrap;
+    
 }
 .productos-1 div span{
     margin: auto;
@@ -137,7 +140,7 @@ aside{
     margin-top: 50px;
     margin-bottom: 200px;
     height: 250px;
-    width: 500px;
+    width: 350px;
     display: grid;
     grid-area: cajas;
     grid-template-columns: 1fr 1fr 1fr;
@@ -160,10 +163,11 @@ aside{
 
 
 /*none*/
-.media-400{
+
+section nav{
     display: none;
 }
-.media-1024{
+aside{
     display: none;
 }
 
@@ -171,27 +175,26 @@ aside{
 
 
 @media screen and (min-width:400px){
+    .contenedor{
+        grid-template-areas: 
+        "productos-1 productos-1 productos-1"
+        "banner banner banner"
+        "productos-2 productos-2 productos-2"
+        "cajas cajas cajas cajas"
+        ;
+    }
+
     .productos-1{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         width: 700px;
+        border: 5px solid white;
     }
     .productos-2{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         width: 700px;
-    }
-
-   /* .contenedor{
-        display: grid;
-        justify-content: center;
-        grid-template-areas: 
-        "productos-1 media-400 media-1024"
-        "banner banner banner"
-        "productos-2 productos-2 productos-2"
-        "cajas cajas cajas"
-        ;
-        font-size: 20px;
+        border: 5px solid white;
     }
     
     
@@ -217,41 +220,10 @@ aside{
     
     .cajas{
         height: 500px;
-        width: 850px;
+        width: 450px;
         grid-template-columns: 1fr 1fr;
     }
 
-    /*imagenes
-    .media-400{
-        margin: 100px 0;
-        display: grid;
-        grid-area: media-400;  
-        align-items: center;
-        align-content: center; 
-    }
-    .media-400 div{
-        display: flex;
-        flex-flow: column wrap;
-    }
-    .media-400 div span{
-        margin: auto;
-    }
-    .media-400 div button{
-        height: 20px;
-        width: 100px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-    .media-400 div img{
-        border: 1px solid black;
-        width: 100px;
-        height: 100px;
-        margin: auto;
-        position: relative;   
-    }
-    
-    
-    */
 }
 
 
@@ -259,50 +231,57 @@ aside{
 
 
 @media screen and (min-width:1024px) {
+    .contenedor{
+        grid-template-areas: 
+        "nav productos-1 productos-1"
+        "nav banner banner"
+        "nav productos-2 productos-2"
+        "cajas cajas cajas"
+        ;
+    }
 
-    
-    /*
-    .media-1024{
-        margin: 100px 0;
+    .productos-1{
         display: grid;
-        grid-area: media-1024;  
-        align-items: center;
-        align-content: center; 
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 700px;
     }
-    .media-1024 div{
+    .productos-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 700px;
+    }
+
+    section nav{
+        height: 450px;
+        display: grid;
+        grid-area: nav;
+        background-color: #85929E;
+    }
+    section nav ul{
         display: flex;
-        flex-flow: column wrap;
+        flex-direction: column;
     }
-    .media-1024 div span{
-        margin: auto;
+    section nav ul li{
+        padding-top: 0;
+        list-style-type: none;
     }
-    .media-1024 div button{
-        height: 20px;
-        width: 100px;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-    .media-1024 div img{
-        border: 1px solid black;
-        width: 100px;
-        height: 100px;
-        margin: auto;
-        position: relative;   
-    }
-    */
 
     /*cajas*/
     .cajas{
         height: 500px;
         width: 850px;
+        margin-left: 100px;
         grid-template-columns: 1fr;
     }    
 
 
     /*aside*/
+    aside{
+        border: 5px solid white;
+    }
     aside img{
         height: 200px;
-        width: 900px;
+        width: 700px;
     } 
 
     /*footer*/
