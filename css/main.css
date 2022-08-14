@@ -43,11 +43,13 @@ footer{
     height: 200px;
     text-align: center;
     background-color: #002B5B; 
- 
+    font-size: 70%;
 }
 footer div{
     margin: 20px 0px;
-    
+}
+footer ul{
+    list-style-type: none;
 }
 footer div img{
     margin-bottom: 0;
@@ -60,9 +62,9 @@ footer div img{
     display: grid;
     justify-content: center;
     grid-template-areas: 
-    "productos-1 productos-1 productos-1"
-    "productos-2 productos-2 productos-2"
-    "cajas cajas cajas"
+    "productos-1 productos-1"
+    "productos-2 productos-2"
+    "cajas cajas"
     ;
 }
 
@@ -71,8 +73,8 @@ footer div img{
     margin: 100px 0;
     display: grid;
     grid-area: productos-1;  
-    align-items: center;
-    align-content: center; 
+    justify-items: center;
+    justify-content: center; 
 }
 .productos-1 div{
     display: flex;
@@ -99,8 +101,8 @@ footer div img{
     margin: 100px 0;
     display: grid;
     grid-area: productos-2;  
-    align-items: center;
-    align-content: center; 
+    justify-items: center;
+    justify-content: center; 
 }
 .productos-2 div{
     display: flex;
@@ -127,10 +129,37 @@ aside{
     display: none;
 } 
 
-/*none*/
+
+
+
+/*cajas*/
 .cajas{
-  display: none;
-} 
+    margin-top: 50px;
+    margin-bottom: 200px;
+    height: 250px;
+    width: 500px;
+    display: grid;
+    grid-area: cajas;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.308);
+    border: 1px solid black;
+    justify-self: center;
+}
+.cajas div{
+    margin: 15px;
+    padding-top: 15px;
+    border: 1px solid black;
+}
+.cajas div img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;  
+}
+
+
+
+/*none*/
 .media-400{
     display: none;
 }
@@ -142,7 +171,18 @@ aside{
 
 
 @media screen and (min-width:400px){
-    .contenedor{
+    .productos-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 700px;
+    }
+    .productos-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 700px;
+    }
+
+   /* .contenedor{
         display: grid;
         justify-content: center;
         grid-template-areas: 
@@ -165,8 +205,23 @@ aside{
         height: 200px;
         width: 500px;
     } 
+    
+    footer{
+        width: auto;
+    
+    }
+    footer ul, div{
+        font-size: 20px;
+    }
 
-    /*imagenes*/
+    
+    .cajas{
+        height: 500px;
+        width: 850px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*imagenes
     .media-400{
         margin: 100px 0;
         display: grid;
@@ -195,14 +250,8 @@ aside{
         position: relative;   
     }
     
-    /*footer*/
-    footer{
-        width: auto;
     
-    }
-    footer ul, div{
-        font-size: 20px;
-    }
+    */
 }
 
 
@@ -210,17 +259,9 @@ aside{
 
 
 @media screen and (min-width:1024px) {
-    .contenedor{
-        display: grid;
-        justify-content: center;
-        grid-template-areas: 
-        "productos-1 media-400 media-1024"
-        "productos-2 productos-2 productos-2"
-        "banner banner banner"
-        "cajas cajas cajas"
-        ;
-    }
 
+    
+    /*
     .media-1024{
         margin: 100px 0;
         display: grid;
@@ -248,30 +289,14 @@ aside{
         margin: auto;
         position: relative;   
     }
+    */
 
     /*cajas*/
     .cajas{
-        margin-top: 50px;
-        margin-bottom: 200px;
         height: 500px;
         width: 850px;
-        display: grid;
-        grid-area: cajas;
-        background-color: rgba(255, 255, 255, 0.308);
-        border: 1px solid black;
-        justify-self: center;
-    }
-    .cajas div{
-        margin: 15px;
-        padding-top: 15px;
-        border: 1px solid black;
-    }
-    .cajas div img{
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        position: relative;  
-    }
+        grid-template-columns: 1fr;
+    }    
 
 
     /*aside*/
