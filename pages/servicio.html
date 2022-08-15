@@ -18,51 +18,72 @@
         </nav>
     </header>
     
-    <div>
-        <section>
+    <div class="contenedor-servicio">
+        <section class="nav-servicio">
             <nav>
-                <h3>Menú</h3>
+                <h4>Menú</h4>
                 <ul>
+                    <a href="../index.html"><li>Home</li></a>
                     <li>Carrito</li>
                     <li>Consolas</li>
                     <li>Periféricos</li>
-                    <li>Servicio Técnico</li>
                     <li>Nosotros</li>
                 </ul>
             </nav>
         </section>
     
         <main>
-            <h2> Servicio Técnico</h2>
             <div>
-                <img src="../img/img-logos/" alt="">
+                <div>
+                    <h2> Servicio Técnico</h2>
+                </div>
+                <div class="banner">
+                    <img src="../img/img-logos/servicio.png" alt="">
+                </div>
             </div>
-            <div>
-                <h3>Trayectoria</h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maxime natus, impedit, ducimus tempora tenetur, voluptatem numquam quod provident enim adipisci at repellendus minus velit non dolor rerum ipsum voluptatum.</p>
-            </div>
-            <div>
-                <h3>Qué reparamos ?</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel laboriosam, voluptatibus a illum aliquid autem ipsam delectus voluptates suscipit unde nisi necessitatibus facere optio? Culpa minima repellendus eum at deserunt.</p>
-                <ul>
-                    <li>consolas</li>
-                    <li>joysticks</li>
-                    <li>actualización gps</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Tiempo estimado</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum, minima optio necessitatibus totam assumenda tempore unde ad consectetur dignissimos. Dignissimos, harum pariatur. Officia doloremque similique facilis tempora sequi natus!</p>
-            </div>
+
+            <section class="info">
+                <div>
+                    <h3>Trayectoria</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maxime natus, impedit, ducimus tempora tenetur, voluptatem numquam quod provident enim adipisci at repellendus minus velit non dolor rerum ipsum voluptatum.</p>
+                </div>
+                <div>
+                    <h3>Qué reparamos ?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel laboriosam, voluptatibus a illum aliquid autem ipsam delectus voluptates suscipit unde nisi necessitatibus facere optio? Culpa minima repellendus eum at deserunt.</p>
+                </div>
+                <div>
+                    <h3>Tiempo estimado</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum, minima optio necessitatibus totam assumenda tempore unde ad consectetur dignissimos. Dignissimos, harum pariatur. Officia doloremque similique facilis tempora sequi natus!</p>
+                </div>
+            </section>
 
             <aside>
                 <div>
                     <img src="../img/img-logos/logo-athari.png" alt="Logo Athari">
                 </div>
             </aside>
-            <!--form-->
-
         </main>
+
+        <div class="formulario">
+            <h5>Dejanos tu consulta</h5>
+            <p>¿Sabías que el presupuesto que realizamos es sin cargo? Completa este formulario con tus datos para recibir una primera información antes de acercarte al local a dejar tu equipo.</p>
+            <form action="../../form-result.php" target="_blank">
+                <p>Tu nombre: <input type="text" name="nombre"></p>
+                <p>Tu mail: <input type="text" name="correo"></p>
+                <p>
+                    Equipo:
+                    <label><input type="radio" name="equipo" value="consola"> Consola</label>
+                    <label><input type="radio" name="equipo" value="joystick"> Joystick</label>
+                    <label><input type="radio" name="equipo" value="gps">GPS</label>
+                    <label><input type="radio" name="equipo" value="perifericos"> Periféricos</label>
+                </p>
+                <p>¿Qué está fallando?<br><textarea name="mensaje"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar mensaje">
+                </p>
+            </form>
+        </div>
 
 
         <section class="cajas">
@@ -82,6 +103,7 @@
                 <p> Conocé más</p>
             </div>
         </section>
+        
     </div>
 
 
@@ -89,13 +111,13 @@
 
     <footer>     
         <ul> 
-            <h4>Sucursales</h4>
+            <h5>Sucursales</h5>
             <li> Calle 54 Nº612, 7 y 8. La Plata.</li>
             <li> Calle 12 Nº521, 62 y 63. La Plata.</li>
         </ul>
 
         <div>
-        <h4>Redes</h4>
+        <h5>Redes</h5>
             <img class="img-redes" src="../img/img-logos/whatsapp.png" alt="">
             <img class="img-redes" src="../img/img-logos/facebook.png" alt="">
             <img class="img-redes" src="../img/img-logos/instagram.png" alt="">

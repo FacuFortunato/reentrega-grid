@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*estilos index*/
 
 /*body*/
 body{
@@ -77,6 +78,7 @@ footer div img{
     margin: 100px 0;
     display: grid;
     grid-area: productos-1;
+    padding: 10px;
 }
 .productos-1 div{
     display: flex;
@@ -104,8 +106,7 @@ footer div img{
     margin: 100px 0;
     display: grid;
     grid-area: productos-2;  
-    justify-items: center;
-    justify-content: center; 
+    padding: 10px; 
 }
 .productos-2 div{
     display: flex;
@@ -163,7 +164,6 @@ aside{
 
 
 /*none*/
-
 section nav{
     display: none;
 }
@@ -172,8 +172,52 @@ aside{
 }
 
 
+/*estilos servicio.html*/
+.contenedor-servicio .banner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.banner img{
+    height: 200px;
+    width: 500px;
+}
+
+main div div{
+    margin: 50px;
+}
 
 
+.info{
+    margin: 100px 10px;
+    background-color: #002B5B;
+}
+.info div{
+    margin: 100px;
+    padding-bottom: 20px;
+}
+
+
+
+.formulario{
+    margin: 10px;
+    border: 1px solid black;
+    align-content: center;
+}
+h5{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*estilos media queries*/
 @media screen and (min-width:400px){
     .contenedor{
         grid-template-areas: 
@@ -224,13 +268,36 @@ aside{
         grid-template-columns: 1fr 1fr;
     }
 
+
+
+    /*estilos servicio*/
+
+    .formulario{
+        margin: 200px 50px;
+    }
+}
+
+
+@media screen and (min-width:600px){
+    /*cajas*/
+    .cajas{
+        height: 500px;
+        width: 600px;
+        margin-left: 100px;
+        grid-template-columns: 1fr;
+    } 
+
+    .banner img{
+        margin-left: 200px ;
+        height: 200px;
+        max-width: 600px;
+    } 
 }
 
 
 
-
-
 @media screen and (min-width:1024px) {
+    /*estilos index*/
     .contenedor{
         grid-template-areas: 
         "nav productos-1 productos-1"
@@ -268,17 +335,11 @@ aside{
 
     /*cajas*/
     .cajas{
-        height: 500px;
         width: 850px;
-        margin-left: 100px;
-        grid-template-columns: 1fr;
-    }    
+    }
 
 
     /*aside*/
-    aside{
-        border: 5px solid white;
-    }
     aside img{
         height: 200px;
         width: 700px;
@@ -288,6 +349,34 @@ aside{
     footer{
         width: 100%;
         font-size: 20px;
+    }
+
+
+    /*estilos servicio*/
+    .banner img{
+        width: 100vw;
+        margin-left: 400px;
+    } 
+
+    .contenedor-servicio{
+        display: grid;
+        grid-template-columns: 0.3fr 3fr;
+        grid-template-areas: 
+        "nav main"
+        "nav main"
+        "formulario formulario"
+        "cajas cajas";
+        justify-content: center;
+    }
+    .formulario{
+        display: grid;
+        grid-area: formulario;
+    }
+    .nav-servicio nav{
+        width: 150px;
+        height: 450px;
+        display: grid;
+        grid-area: nav;
     }
 
 }
